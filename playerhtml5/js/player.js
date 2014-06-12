@@ -247,8 +247,8 @@ var Player = {
         }
         
         this.$subtitles.find('img').css({
-            height : 'auto',
-            width : 'auto'
+            height : 'auto'//,
+//            width : 'auto'
         });
 
         this.$text.hide();
@@ -294,8 +294,8 @@ var Player = {
         this.$text.hide();
         
         this.$subtitles.find('img').css({
-            height : this.$subtitles.height(),
-            width : 'auto'
+            height : this.$subtitles.height()//,
+//            width : 'auto'
         });
 
         this.centerImg();
@@ -310,8 +310,8 @@ var Player = {
         this.$cuePlayer.draggable("disable");
         
         this.$subtitles.find('img').css({
-            height : 'auto',
-            width : 'auto'
+            height : 'auto'//,
+//            width : 'auto'
         });
     },
     prev: function() {
