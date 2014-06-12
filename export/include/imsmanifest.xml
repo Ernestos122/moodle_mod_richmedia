@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="manifest_richmedia" version="1.1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd   http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd  http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd ">
+  <organizations default="richmedia">
+    <organization identifier="richmedia">
+      <title>Rich Media</title>
+      <item identifier="richmedia_l01" identifierref="r_richmedia_l01">
+        <title>Rich media</title>
+        <metadata>
+          <schema>ADL SCORM</schema>
+          <schemaversion>1.2</schemaversion>
+          <imsmd:lom xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+            <imsmd:general>
+              <imsmd:title>
+                <imsmd:langstring>Rich media</imsmd:langstring>
+              </imsmd:title>
+              <imsmd:catalogentry>
+                <imsmd:catalog>moodle_catalog_placeholder</imsmd:catalog>
+                <imsmd:entry>
+                  <imsmd:langstring>{richmedia_l01}</imsmd:langstring>
+                </imsmd:entry>
+              </imsmd:catalogentry>
+              <imsmd:description>
+                <imsmd:langstring />
+              </imsmd:description>
+              <imsmd:keyword>
+                <imsmd:langstring />
+              </imsmd:keyword>
+            </imsmd:general>
+            <imsmd:lifecycle>
+              <imsmd:contribute>
+                <imsmd:role>
+                  <imsmd:source>
+                    <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+                  </imsmd:source>
+                  <imsmd:value>
+                    <imsmd:langstring xml:lang="x-none">Author</imsmd:langstring>
+                  </imsmd:value>
+                </imsmd:role>
+                <imsmd:centity>
+                  <imsmd:vcard>BEGIN:vCard ORG:Moodle END:vCard</imsmd:vcard>
+                </imsmd:centity>
+              </imsmd:contribute>
+              <imsmd:version>
+                <imsmd:langstring>unknown</imsmd:langstring>
+              </imsmd:version>
+              <imsmd:status>
+                <imsmd:source>
+                  <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+                </imsmd:source>
+                <imsmd:value>
+                  <imsmd:langstring xml:lang="x-none">Final</imsmd:langstring>
+                </imsmd:value>
+              </imsmd:status>
+            </imsmd:lifecycle>
+            <imsmd:metametadata>
+              <imsmd:metadatascheme>ADL SCORM 1.2</imsmd:metadatascheme>
+            </imsmd:metametadata>
+            <imsmd:technical>
+              <imsmd:format>Flash</imsmd:format>
+              <imsmd:location type="URI">unspecified</imsmd:location>
+            </imsmd:technical>
+            <imsmd:educational>
+              <imsmd:typicallearningtime>
+                <imsmd:datetime />
+              </imsmd:typicallearningtime>
+            </imsmd:educational>
+            <imsmd:rights />
+            <imsmd:classification />
+          </imsmd:lom>
+        </metadata>
+        <adlcp:masteryscore />
+      </item>
+      <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+        <imsmd:lom xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+          <imsmd:general>
+            <imsmd:title>
+              <imsmd:langstring>Influence</imsmd:langstring>
+            </imsmd:title>
+            <imsmd:catalogentry>
+              <imsmd:catalog>moodle_catalog_placeholder</imsmd:catalog>
+              <imsmd:entry>
+                <imsmd:langstring>{richmedia}</imsmd:langstring>
+              </imsmd:entry>
+            </imsmd:catalogentry>
+            <imsmd:description>
+              <imsmd:langstring />
+            </imsmd:description>
+            <imsmd:keyword>
+              <imsmd:langstring />
+            </imsmd:keyword>
+          </imsmd:general>
+          <imsmd:lifecycle>
+            <imsmd:contribute>
+              <imsmd:role>
+                <imsmd:source>
+                  <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+                </imsmd:source>
+                <imsmd:value>
+                  <imsmd:langstring xml:lang="x-none">Author</imsmd:langstring>
+                </imsmd:value>
+              </imsmd:role>
+              <imsmd:centity>
+                <imsmd:vcard>BEGIN:vCard ORG:Moodle END:vCard</imsmd:vcard>
+              </imsmd:centity>
+            </imsmd:contribute>
+            <imsmd:version>
+              <imsmd:langstring>unknown</imsmd:langstring>
+            </imsmd:version>
+            <imsmd:status>
+              <imsmd:source>
+                <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+              </imsmd:source>
+              <imsmd:value>
+                <imsmd:langstring xml:lang="x-none">Final</imsmd:langstring>
+              </imsmd:value>
+            </imsmd:status>
+          </imsmd:lifecycle>
+          <imsmd:metametadata>
+            <imsmd:metadatascheme>ADL SCORM 1.2</imsmd:metadatascheme>
+          </imsmd:metametadata>
+          <imsmd:technical>
+            <imsmd:format>Flash</imsmd:format>
+            <imsmd:location type="URI">unspecified</imsmd:location>
+          </imsmd:technical>
+          <imsmd:educational>
+            <imsmd:typicallearningtime>
+              <imsmd:datetime />
+            </imsmd:typicallearningtime>
+          </imsmd:educational>
+          <imsmd:rights />
+          <imsmd:classification />
+        </imsmd:lom>
+      </metadata>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="r_richmedia_l01" href="richmedia/index.html" type="webcontent" adlcp:scormtype="sco" />
+  </resources>
+</manifest>
+

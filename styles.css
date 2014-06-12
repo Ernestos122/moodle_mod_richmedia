@@ -1,0 +1,192 @@
+/***************** XML EDITOR ***************/
+
+#page-mod-richmedia-xmleditor .add {
+    background: url('[[pix:mod_richmedia|add]]')  no-repeat !important;
+}
+
+#page-mod-richmedia-xmleditor .save {
+    background: url('[[pix:mod_richmedia|disk]]') no-repeat !important;
+}
+
+#page-mod-richmedia-xmleditor .play {
+    background: url('[[pix:mod_richmedia|play]]') no-repeat !important;
+}
+
+#page-mod-richmedia-xmleditor #tab {
+    width: 100%;
+}
+
+#page-mod-richmedia-xmleditor .x-btn {
+    border-collapse: collapse;
+}
+
+#page-mod-richmedia-xmleditor .x-toolbar-cell {
+    background: none;
+    display: inline-block;
+}
+
+#page-mod-richmedia-xmleditor #tab .x-grid3-hd,
+#page-mod-richmedia-xmleditor #tab .x-grid3-hd-inner{
+    padding : 0;
+}
+
+#page-mod-richmedia-xmleditor .x-toolbar-right {
+    display : none;
+}
+
+#page-mod-richmedia-xmleditor .x-btn button {
+    background : none;
+}
+
+#page-mod-richmedia-xmleditor .x-panel-tbar table {
+    border-spacing : 0;
+}
+
+#page-mod-richmedia-xmleditor .x-grid3-header-inner td {
+    background : none;
+}
+
+#page-mod-richmedia-xmleditor .x-panel-footer .x-toolbar-ct {
+    width : auto;
+    margin : auto;
+}
+
+#page-mod-richmedia-xmleditor .x-panel-footer .x-toolbar-ct .x-toolbar-left {
+    background : none;
+}
+
+#page-mod-richmedia-xmleditor .x-grid3-scroller {
+    overflow: auto;
+    overflow-x : hidden;
+}
+
+#page-mod-richmedia-xmleditor .x-panel-tbar .x-toolbar-left {
+    padding : 0;
+}
+
+#page-mod-richmedia-xmleditor .x-window-footer .x-toolbar-ct,
+#page-mod-richmedia-xmleditor .x-window-footer .x-toolbar-left {
+    background : none;
+    width : auto;
+    margin : auto;
+}
+
+#page-mod-richmedia-xmleditor .x-panel-tbar table {
+    margin-bottom : 0;
+}
+
+#videoDisplay {
+    height : 253px;
+}
+
+#myFlash {
+    width : 100%;
+}
+
+#videoDisplay,
+#imageDisplay,
+#videoDisplay div,
+#imageDisplay div {
+    background : #333;
+    max-height : 275px !important;
+}
+
+#page-mod-richmedia-xmleditor form.x-panel-body {
+    padding : 0;
+    background : #333;
+}
+
+#videoDisplay>.x-panel-bwrap .x-panel-body{
+    background : black;
+}
+
+#videoDisplay {
+    padding-left : 34px;
+    height : 275px;
+}
+
+#imageDisplay {
+    right : 34px !important;
+    display : table;
+    height : 275px;
+    vertical-align : middle;
+}
+
+#imageDisplay>div {
+    width : 100%;
+    display:table-cell;
+    vertical-align: middle;
+}
+
+#page-mod-richmedia-xmleditor .x-grid3-col-actions img {
+    margin-right : 5px;
+}
+
+#page-mod-richmedia-xmleditor .x-grid3-row-table {
+    border-spacing : 0;
+}
+
+/**************** THEME MANAGER ***************/
+
+#page-mod-richmedia-edit_theme .x-toolbar-right{
+    display : none;
+}
+
+#page-mod-richmedia-edit_theme .x-panel-footer {
+    width : auto !important;
+}
+
+#page-mod-richmedia-edit_theme .x-panel-footer .x-toolbar-ct,
+#page-mod-richmedia-edit_theme .x-window .x-toolbar-ct{
+    width : auto !important;
+    margin : auto;
+}
+
+#page-mod-richmedia-edit_theme .x-grid3-hd {
+    padding: 0;
+}
+
+#page-mod-richmedia-edit_theme .x-panel-footer .x-toolbar-left,
+#page-mod-richmedia-edit_theme .x-window .x-toolbar-left {
+    background : none;
+}
+
+#page-mod-richmedia-edit_theme .x-btn button {
+    background : none;
+}
+
+#page-mod-richmedia-edit_theme .x-panel-footer .x-toolbar-cell,
+#page-mod-richmedia-edit_theme .x-window .x-toolbar-cell {
+    background : none;
+}
+
+#page-mod-richmedia-edit_theme .x-btn {
+    border-collapse: collapse;
+}
+
+#page-mod-richmedia-edit_theme .x-window-body {
+    min-height: 120px;
+}
+
+#page-mod-richmedia-edit_theme .x-window-body form.x-panel-body {
+    min-height : 98px;
+}
+
+#page-mod-richmedia-view #intro-div {
+    padding :5px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom : 20px;
+    margin-top : 10px;
+}
+
+#page-mod-richmedia-view #intro-div .keyword {
+    color : #FFF;
+    background-color:#333;
+    padding:2px;
+}
+
+label[for="logoupload"],
+label[for="backgroundupload"] {
+    display : inline-block;
+}

@@ -1,0 +1,408 @@
+#richmedia {
+    display:none;
+    position : relative;
+    margin-bottom : 20px !important;
+    max-width : 1254px;
+    width : 100%;
+}
+
+#richmedia-content {
+    overflow : hidden;
+    position:absolute;
+    top : 0px;
+}
+
+#richmedia input {
+    background-color : transparent;
+}
+
+#page-mod-richmedia-playerhtml5-index #gridSlides .x-grid3-header {
+    display:none;
+}
+
+#richmedia .x-window-plain .x-window-body {
+    background-color : #FFF !important;
+}
+
+#richmedia #next,
+#richmedia #prev,
+#richmedia #playbutton,
+#richmedia #list,
+#richmedia #closed,
+#richmedia #fullscreen {
+    width :28px;
+    height :27px;
+    border:none;
+    margin-top:3px;
+    cursor : pointer;
+    float : left;
+}
+
+#richmedia #next {
+    background-image : url('../pix/next.png');
+    margin-right : 14px;
+}
+
+#richmedia #next:hover {
+    background-image : url('../pix/next_roll.png');
+}
+
+#richmedia #prev {
+    background-image : url('../pix/prev.png');
+    margin-right : 5px;
+}
+
+#richmedia #prev:hover {
+    background-image : url('../pix/prev_roll.png');
+}
+
+#richmedia #playbutton {
+    background-image : url('../pix/play.png');
+    margin-right : 5px;
+}
+
+#richmedia #playbutton:hover {
+    background-image : url('../pix/play_roll.png');
+}
+
+#richmedia.play #playbutton {
+    background-image : url('../pix/pause.png');
+}
+
+#richmedia.play #playbutton:hover {
+    background-image : url('../pix/pause_roll.png');
+}
+
+#richmedia #list {
+    background-image : url('../pix/list.png');
+    float:left;
+    margin-left:7px;
+    margin-right : 14px;
+    display:block;
+}
+
+#richmedia #list:hover {
+    background-image : url('../pix/list_roll.png');
+}
+
+#richmedia #fullscreen {
+    background-image : url('../pix/fullscreen.png');
+    background-size : auto 100%;
+    background-repeat: no-repeat;
+}
+
+#richmedia #controles {
+    width: 100%;
+    margin:auto;
+    height: 48px;
+    background: url('../pix/footer.png') repeat-x;
+    position:relative;
+}
+
+#richmedia #credit {
+    background-image : url('../pix/credit.png');
+    width:18px;
+    height:19px;
+    background-repeat: no-repeat;
+    border:none;
+    margin-right: 7px;
+    margin-top:7px;
+    border-radius: 0;
+    padding: 0;
+    float : left;
+}
+
+#richmedia #credit:hover {
+    background-image : url('../pix/credit_roll.png');
+}
+
+#richmedia #credit-div {
+    float: right;
+}
+
+#richmedia #closed {
+    background-image : url('../pix/closed_normal.png');
+    margin-left : 10px;
+}
+
+#richmedia.locked #closed {
+    background-image : url('../pix/opened_normal.png');
+}
+
+#richmedia #closed:hover {
+    background-image : url('../pix/closed_hover.png');
+}
+
+#richmedia.locked #closed:hover {
+    background-image : url('../pix/opened_hover.png');
+}
+
+#selectview {
+    float : left;
+    width : 100px;
+    margin-left : 2px;
+    margin-top : 6px;
+    height : auto;
+    padding : 0;
+}
+
+#fullscreen {
+    margin-right : 7px;
+    margin-left : 10px;
+}
+
+#richmedia #closewindow {
+    border:none;
+    color:#FFF;
+    background-color : #000;
+    cursor : pointer;
+    padding:3px;
+}
+
+#richmedia #richmedia-fullcontent {
+    margin : auto;
+    width:100%;
+    position :relative;
+    background-size : auto 100%;
+    background-repeat : no-repeat;
+}
+
+#richmedia-title {
+    font-size:24px;
+    float:right;
+    margin-right:2.16%;
+}
+
+#richmedia #subtitles {
+    width : 63%;
+    float:right;
+    margin-right : 2.16%;
+    text-align:center;
+    margin-top : 0;
+}
+
+#subtitles .slide-title {
+    display : none;
+}
+
+#richmedia #subtitles.ui-state-disabled {
+    opacity : 1;
+}
+
+#richmedia, #loading {
+    box-shadow: 6px 0 4px  -4px #C6C7C8 , -6px 0 4px  -4px #C6C7C8;
+    margin:auto;
+    width:100%;
+}
+
+#loading {
+    text-align : center;
+}
+
+#loading img {
+    margin-top : 300px;
+}
+
+#richmedia .richmedia-content {
+    padding-top: 12%;
+    width:100%;
+}
+
+#richmedia #left {
+    float:left;
+    margin-left : 1.6%;
+    width : 30%;
+}
+
+#richmedia #presentername {
+    font-size : 14px;
+}
+
+#richmedia #presenterbio {
+    font-size : 11px;
+    text-align:left;
+    background : rgba(255,255,255,0.3);
+    line-height: 14px;
+}
+
+#richmedia #text {
+    overflow : auto;
+    width : 100%;
+    max-height : 245px;
+    height:100%;
+    position : relative;
+}
+
+#richmedia #video {
+    width : 100%;
+    height : auto;
+    background : black;
+}
+
+#richmedia #right {
+    float : right;
+    display : inline-block;
+    position : relative;
+}
+
+#richmedia #head {
+    overflow : visible;
+    position:absolute;
+    width:100%;
+    padding-top : 2.3%;
+}
+
+#richmedia #id-card {
+    display : none;
+}
+
+#richmedia input[type="button"]:hover,
+#richmedia input[type="button"]:focus {
+    transition : none !important;
+    background-position: initial !important;
+}
+
+#richmedia .x-panel-tbar {
+    display : none;
+}
+
+#richmedia div[role="main"] {
+    background : none;
+}
+
+#richmedia .back {
+    width : 100%;
+}
+
+#richmedia .back a {
+    width:100%;
+    margin : auto;
+    text-align : left;
+    display : block;
+}
+
+#richmedia .x-window-bl {
+    display : none;
+}
+
+#richmedia .navbar-fixed-top{
+    position : relative;
+}
+
+#richmedia .ui-dialog {
+    overflow-y : auto;
+    overflow-x : hidden;
+}
+
+#richmedia .ui-dialog .ui-icon-closethick {
+    margin-left : -9px;
+}
+
+#richmedia-summary table {
+    width : 100%;
+}
+
+#richmedia-summary table tr {
+    background : #F9F9F9;
+}
+
+#richmedia-summary table tr:nth-child(2n+1) {
+    background : white;
+}
+
+#richmedia-summary table tr:hover,
+#richmedia-summary table tr:nth-child(2n+1):hover {
+    background : #DDD;
+    cursor : pointer;
+}
+
+#richmedia-copyright {
+    text-align : center;
+}
+
+#progress-bar {
+    height : 13px;
+    background : #777777;
+    position : relative;
+}
+
+#richmedia .delimiter {
+    position: absolute;
+    top: 0;
+}
+
+.img-preview {
+    height : 13px;
+    top : 0;
+    position : absolute;
+    cursor : pointer;
+}
+
+#progress {
+    height : 13px;
+    background : #CC181E;
+    width : 0;
+    position : absolute;
+    left : 0;
+}
+
+#cuePlayer {
+    opacity : 1;
+}
+
+#richmedia-logo {
+    left : 10px;
+    top : 8%;
+    width : 11%;
+    max-width: 20%;
+    position : absolute;
+}
+
+#page-mod-richmedia-view #symquiz_player {
+    display : none;
+    text-align : left;
+}
+
+#volume-bar {
+    float : left;
+    width : 70px;
+    margin-left : 10px;
+    height : 34px;
+}
+
+#volume-bar::-ms-fill-lower { display : none; }
+#volume-bar::-ms-fill-upper { display : none; }
+#volume-bar::-ms-thumb { background: grey; }
+#volume-bar::-ms-ticks-after { display: none; }
+#volume-bar::-ms-ticks-before { display: none; }
+#volume-bar::-ms-tooltip { display: none; /* display and visibility only */ }
+#volume-bar::-webkit-slider-runnable-track { background : #808080; }
+#volume-bar::-webkit-slider-thumb { background : #EDEDED; }
+
+#controles-left {
+    float : left;
+}
+
+#controles-right {
+    float : right;
+}
+
+@media (max-width : 1024px){
+
+    #richmedia-title {
+        font-size : 22px;
+    }
+}
+
+@media only screen and (device-width: 768px) {
+    #richmedia #selectview {
+        top : 2px !important;
+    }
+}
+
+@media (max-width : 800px){
+    #richmedia #richmedia-logo {
+        max-width : 160px;
+    }
+}
+

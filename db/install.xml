@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/richmedia/db" VERSION="20111012" COMMENT="XMLDB file for Moodle mod/richmedia"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="richmedia" COMMENT="each table is one RICHMEDIA module and its configuration" NEXT="richmedia_track">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="course"/>
+        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="id" NEXT="name"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="course" NEXT="referenceslides"/>
+        <FIELD NAME="referenceslides" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="name" NEXT="referencesvideo"/>
+        <FIELD NAME="referencesvideo" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="referenceslides" NEXT="referencesfond"/>
+        <FIELD NAME="referencesfond" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="referencesvideo" NEXT="referencesxml"/>
+        <FIELD NAME="referencesxml" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="referencesfond" NEXT="referencessynchro"/>
+        <FIELD NAME="referencessynchro" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="referencesxml" NEXT="sha1hash"/>
+        <FIELD NAME="sha1hash" TYPE="char" LENGTH="40" NOTNULL="false" SEQUENCE="false" COMMENT="package content or ext path hash" PREVIOUS="referencessynchro" NEXT="intro"/>
+        <FIELD NAME="intro" TYPE="text" LENGTH="small" NOTNULL="true" SEQUENCE="false" PREVIOUS="sha1hash" NEXT="introformat"/>
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="intro" NEXT="width"/>
+        <FIELD NAME="width" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="100" SEQUENCE="false" PREVIOUS="introformat" NEXT="height"/>
+        <FIELD NAME="height" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="600" SEQUENCE="false" PREVIOUS="width" NEXT="theme"/>
+        <FIELD NAME="theme" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="height" NEXT="html5"/>
+        <FIELD NAME="html5" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="theme" NEXT="font"/>
+        <FIELD NAME="font" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="html5" NEXT="fontcolor"/>
+        <FIELD NAME="fontcolor" TYPE="char" LENGTH="8" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="font" NEXT="defaultview"/>
+        <FIELD NAME="defaultview" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="fontcolor" NEXT="autoplay"/>
+        <FIELD NAME="autoplay" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="defaultview" NEXT="presentor"/>
+        <FIELD NAME="presentor" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="autoplay" NEXT="keywords"/>
+        <FIELD NAME="keywords" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="presentor" NEXT="quizid"/>
+        <FIELD NAME="quizid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="keywords"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="course" UNIQUE="false" FIELDS="course"/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="richmedia_track" COMMENT="to track Rich medias" PREVIOUS="richmedia">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="id" NEXT="richmediaid"/>
+        <FIELD NAME="richmediaid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="userid" NEXT="attempt"/>
+        <FIELD NAME="attempt" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="1" SEQUENCE="false" PREVIOUS="richmediaid" NEXT="start"/>
+        <FIELD NAME="start" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="attempt" NEXT="last"/>
+        <FIELD NAME="last" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="start"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="richmediaid"/>
+        <KEY NAME="richmediaid" TYPE="foreign" FIELDS="richmediaid" REFTABLE="richmedia" REFFIELDS="id" PREVIOUS="primary"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="userid-richmediaid" UNIQUE="true" FIELDS="userid, richmediaid" NEXT="userid"/>
+        <INDEX NAME="userid" UNIQUE="false" FIELDS="userid" PREVIOUS="userid-richmediaid"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
