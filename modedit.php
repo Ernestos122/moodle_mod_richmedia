@@ -121,9 +121,7 @@ if (!empty($add)) {
     $data->completionexpected = $cm->completionexpected;
     $data->completionusegrade = is_null($cm->completiongradeitemnumber) ? 0 : 1;
     if (!empty($CFG->enableavailability)) {
-        $data->availablefrom = $cm->availablefrom;
-        $data->availableuntil = $cm->availableuntil;
-        $data->showavailability = $cm->showavailability;
+	    $data->availabilityconditionsjson = $cm->availability;
     }
 
     if (plugin_supports('mod', $data->modulename, FEATURE_MOD_INTRO, true)) {
@@ -211,7 +209,7 @@ if ($mform->is_cancelled()) {
 } else if ($fromform = $mform->get_data()) {
     $fromform->theme = $_POST['theme'];
     $fromform->html5 = $_POST['html5'];
-
+/*
     if (empty($fromform->coursemodule)) {
         // Add
         $cm = null;
@@ -264,9 +262,9 @@ if ($mform->is_cancelled()) {
     } else {
         $fromform->completiongradeitemnumber = null;
     }
-
+ */
     if (!empty($fromform->update)) {
-
+/*
         if (!empty($course->groupmodeforce) or !isset($fromform->groupmode)) {
             $fromform->groupmode = $cm->groupmode; // keep original
         }
@@ -285,7 +283,8 @@ if ($mform->is_cancelled()) {
             $cm->completionexpected = $fromform->completionexpected;
         }
         if (!empty($CFG->enableavailability)) {
-            $cm->availablefrom = $fromform->availablefrom;
+	$data->availabilityconditionsjson = $cm->availability;
+		$cm->availablefrom = $fromform->availablefrom;
             $cm->availableuntil = $fromform->availableuntil;
             // The form time is midnight, but because we want it to be
             // inclusive, set it to 23:59:59 on that day.
@@ -336,8 +335,10 @@ if ($mform->is_cancelled()) {
 
         add_to_log($course->id, "course", "update mod", "../mod/$fromform->modulename/view.php?id=$fromform->coursemodule", "$fromform->modulename $fromform->instance");
         add_to_log($course->id, $fromform->modulename, "update", "view.php?id=$fromform->coursemodule", "$fromform->instance", $fromform->coursemodule);
-    } else if (!empty($fromform->add)) {
+ */
 
+    } else if (!empty($fromform->add)) {
+/*
         if (!empty($course->groupmodeforce) or !isset($fromform->groupmode)) {
             $fromform->groupmode = 0; // do not set groupmode
         }
@@ -441,10 +442,12 @@ if ($mform->is_cancelled()) {
 
         add_to_log($course->id, "course", "add mod", "../mod/$fromform->modulename/view.php?id=$fromform->coursemodule", "$fromform->modulename $fromform->instance");
         add_to_log($course->id, $fromform->modulename, "add", "view.php?id=$fromform->coursemodule", "$fromform->instance", $fromform->coursemodule);
+ */
+	    $fromform=add_moduleinfo($fromform,$course,$mform);
     } else {
         print_error('invaliddata');
     }
-
+/*
     // sync idnumber with grade_item
     if ($grade_item = grade_item::fetch(array('itemtype' => 'mod', 'itemmodule' => $fromform->modulename,
                 'iteminstance' => $fromform->instance, 'itemnumber' => 0, 'courseid' => $course->id))) {
@@ -535,7 +538,7 @@ if ($mform->is_cancelled()) {
     rebuild_course_cache($course->id);
     grade_regrade_final_grades($course->id);
     plagiarism_save_form_elements($fromform); //save plagiarism settings
-
+ */
     redirect("$CFG->wwwroot/mod/$module->name/xmleditor.php?update=$fromform->coursemodule");
 
     exit;
