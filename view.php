@@ -100,12 +100,12 @@ if ($richmedia->html5 && $extension != 'flv' && $extension != 'swf') {
     }
     // END QUIZ
     // Add videojs css and js files.
-        $this->page->requires->css('/mod/videofile/video-js-4.6.3/video-js.min.css');
-        $this->page->requires->js('/mod/videofile/video-js-4.6.3/video.js', true);
+        $PAGE->requires->css('/mod/videofile/video-js-4.6.3/video-js.min.css');
+        $PAGE->requires->js('/mod/videofile/video-js-4.6.3/video.js', true);
 
         // Set the videojs flash fallback url.
         $swfurl = new moodle_url('/mod/videofile/video-js-4.6.3/video-js.swf');
-        $this->page->requires->js_init_code(
+        $PAGE->requires->js_init_code(
             'videojs.options.flash.swf = "' . $swfurl . '";');
 
        
