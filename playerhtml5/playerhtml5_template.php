@@ -19,7 +19,7 @@
                         <?php
                         if (!$audioMode) {
                             ?>
-                            <video id="video" preload="auto" onpause="Player.pauseVideo()" onplay="Player.playVideo()">
+                            <video id="video" class='video-js vjs-default-skin' preload="auto" onpause="Player.pauseVideo()" onplay="Player.playVideo()">
                                 <source src="<?php echo $richmediainfos->filevideo ?>" type="video/mp4" />
                                 <source src="<?php echo $richmediainfos->filevideo ?>" type="video/ogg" />
                                 <source src="<?php echo $richmediainfos->filevideo ?>" type="video/webm" />
